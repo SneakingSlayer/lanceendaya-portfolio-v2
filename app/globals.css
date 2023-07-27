@@ -16,12 +16,49 @@
   }
 }
 
+html {
+  height: 100%;
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+#main {
+  width: 100%;
+}
+
+.accent-gradient {
+  background: rgb(255, 255, 255);
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    119deg,
+    rgba(255, 255, 255, 0.07326680672268904) 0%,
+    rgba(19, 20, 23, 0) 43%
+  );
+}
+
+.faded-corners-overlay::after,
+.faded-corners-overlay::before {
+  /* background: linear-gradient(
+    to right,
+    rgba(29, 31, 35, 1),
+    rgba(29, 31, 35, 0)
+  ); */
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 100px;
+  z-index: 2;
+}
+
+.faded-corners-overlay::after {
+  top: 0;
+  right: 0;
+  transform: rotateZ(180deg);
+}
+.faded-corners-overlay::before {
+  top: 0;
+  left: 0;
 }
