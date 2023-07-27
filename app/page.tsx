@@ -1,18 +1,18 @@
 import { ProfileCard, Container } from "@/components";
 import { HeroSection, FeedbacksCarousel, ProjectCard } from "@/components";
 
-import { projects } from "@/constants";
+import { BASE_URL, projects } from "@/constants";
 
 const getTopFeedbacks = async () => {
-  const result = await fetch(
-    "http://localhost:3000/api/feedbacks?top=true&limit=3",
-    {
+  try {
+    const result = await fetch(`${BASE_URL}/api/feedbacks?top=true&limit=3`, {
       method: "GET",
       cache: "no-cache",
-    }
-  );
-
-  return await result.json();
+    });
+    return await result.json();
+  } catch (error) {
+    return { data: [] };
+  }
 };
 
 export default async function Home() {
