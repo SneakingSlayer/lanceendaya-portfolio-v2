@@ -1,7 +1,7 @@
 import "./globals.css";
-import type { Metadata } from "next";
 import { RootLayout as ParentLayout } from "@/components";
 import { cookies } from "next/headers";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Lance Endaya",
