@@ -79,8 +79,8 @@ const FeedbacksCarousel = ({ feedbacks }: { feedbacks: any[] }) => {
 
   React.useEffect(() => {
     handleSetPosition();
-    window.addEventListener("resize", handleSetPosition);
-    return () => window.removeEventListener("resize", handleSetPosition);
+    /*   window.addEventListener("resize", handleSetPosition);
+    return () => window.removeEventListener("resize", handleSetPosition); */
   }, [handleSetPosition]);
 
   React.useEffect(() => {
