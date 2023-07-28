@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { Analytics } from "@vercel/analytics/react";
 import { Work_Sans } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
 import { Footer, Logo, Navbar, Typography } from "@/components";
@@ -100,6 +101,7 @@ const RootLayout = ({
             </>
           )}
         </AnimatePresence>
+        <Analytics />
       </body>
     </html>
   );
