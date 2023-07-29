@@ -6,11 +6,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Lance Endaya",
   description:
-    "Hi! I am Lance Endaya and I'm a Software Engineer primarily focused on enhancing your web experience. I recently graduated from Malayan Colleges, MAPUA as a Computer Science major.",
+    "Hi! I am Lance Endaya and I'm a Software Engineer primarily focused on enhancing your web experience. I am a Computer Science major from MAPUA, Malayan Colleges.",
   openGraph: {
     title: "Lance Endaya",
     description:
-      "Hi! I am Lance Endaya and I'm a Software Engineer primarily focused on enhancing your web experience. I recently graduated from Malayan Colleges, MAPUA as a Computer Science major.",
+      "Hi! I am Lance Endaya and I'm a Software Engineer primarily focused on enhancing your web experience. I am a Computer Science major from MAPUA, Malayan Colleges.",
     images: "https://i.ibb.co/B44gwXZ/og.png",
     type: "website",
     url: "https://lanceendaya.online",
