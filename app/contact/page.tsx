@@ -21,9 +21,9 @@ export const metadata: Metadata = {
 };
 const ContactPage = () => {
   return (
-    <Container pageKey="contact" className="h-full">
-      <div className="w-full pt-10 md:pt-16 pb-10 ">
-        <PageTitle className="gap-1 sm:gap-5 mb-8">
+    <Container pageKey="contact" className="h-full ">
+      <div className="w-full  pt-10 md:pt-16 pb-10 ">
+        <PageTitle className="gap-1 lg:gap-5 mb-8">
           <Typography as="h2" variant="h2">
             Contact
           </Typography>
@@ -32,7 +32,7 @@ const ContactPage = () => {
           </Typography>
         </PageTitle>
         <div className="mb-4">
-          <Typography variant="small" className="mb-4">
+          <Typography className="mb-4">
             Get in touch with any questions, inquiries, or feedback you may
             have. I look forward to hearing from you and building a meaningful
             relationship together.
@@ -40,12 +40,12 @@ const ContactPage = () => {
           <ul className="flex flex-col gap-3 mb-4">
             <li className="flex items-center gap-2">
               <FaLocationArrow />
-              <Typography variant="small">Davao city, Philippines</Typography>
+              <Typography>Davao city, Philippines</Typography>
             </li>
 
             <li className="flex items-center gap-2">
               <FaEnvelope />
-              <Typography variant="small">endayalance@yahoo.com</Typography>
+              <Typography>endayalance@yahoo.com</Typography>
             </li>
           </ul>
           <div className="py-3">

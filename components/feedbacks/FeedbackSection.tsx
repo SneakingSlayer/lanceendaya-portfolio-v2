@@ -81,7 +81,7 @@ const FeedbackSection = () => {
         <button
           onClick={() => setIsOpen(true)}
           type="submit"
-          className={`flex items-center gap-2 border border-creamy-gray dark:border-creamy-white rounded-lg text-creamy-gray dark:text-creamy-white py-1 px-3 text-xs`}
+          className={`flex items-center gap-2 border border-creamy-gray dark:border-creamy-white rounded-lg text-creamy-gray dark:text-creamy-white py-2 px-3 sm:py-2 sm:px-3 text-xs sm:text-xs`}
         >
           <span>Say something</span> <CgArrowLongRight fontSize={14} />
         </button>
@@ -96,8 +96,8 @@ const FeedbackSection = () => {
         {isFetching &&
           feedbacks?.currentPage === 0 &&
           [...Array(15)].map((el, i) => (
-            <div key={i} role="status" className="max-w-sm animate-pulse">
-              <div className="min-h-[120px] bg-creamy-gray/30 dark:bg-creamy-white/5 rounded-2xl" />
+            <div key={i} role="status" className=" animate-pulse">
+              <div className="min-h-[130px] md:min-h-[150px] bg-creamy-gray/30 dark:bg-creamy-white/5 rounded-2xl" />
             </div>
           ))}
         {!!feedbacks?.currentPage &&

@@ -89,15 +89,12 @@ const FeedbacksCarousel = ({ feedbacks }: { feedbacks: any[] }) => {
   }, [handleNext]);
 
   return (
-    <div className="grid-cols-1 sm:grid-cols-2 grid pt-20 pb-8 gap-5">
+    <div className="grid-cols-1 md:grid-cols-2 grid pt-20 pb-8 gap-5">
       <div>
-        <Typography as="h5" variant="h5" className="mb-1">
+        <Typography as="h4" variant="h4" className="mb-1">
           Community Feedback
         </Typography>
-        <Typography
-          variant="small"
-          className="text-creamy-gray/50 dark:text-creamy-white/50 mb-4"
-        >
+        <Typography className="text-creamy-gray/50 dark:text-creamy-white/50 mb-4">
           {
             "I value your feedback as it helps me understand how I'm doing and what I can do better."
           }
@@ -115,7 +112,7 @@ const FeedbacksCarousel = ({ feedbacks }: { feedbacks: any[] }) => {
       </div>
 
       <div
-        className={`relative w-full min-h-[130px] flex justify-center overflow-hidden faded-corners-overlay before:bg-gradient-to-r before:from-creamy-white after:bg-gradient-to-r after:from-creamy-white dark:before:from-creamy-gray dark:after:bg-gradient-to-r dark:after:from-creamy-gray`}
+        className={`relative w-full min-h-[130px] md:min-h-[150px] flex justify-center overflow-hidden faded-corners-overlay before:bg-gradient-to-r before:from-creamy-white after:bg-gradient-to-r after:from-creamy-white dark:before:from-creamy-gray dark:after:bg-gradient-to-r dark:after:from-creamy-gray`}
       >
         <FeedbackCard
           truncateText="line-clamp-3"
@@ -125,7 +122,7 @@ const FeedbacksCarousel = ({ feedbacks }: { feedbacks: any[] }) => {
             opacity: isCenterLeft ? 1 : 0.4,
             left: positions.left.left,
           }}
-          className={`absolute bg-creamy-black w-10/12 sm:w-full sm:w-auto sm:max-w-xs p-5 rounded-2xl ${
+          className={`absolute bg-creamy-black w-10/12 sm:w-full sm:w-auto sm:max-w-xs lg:max-w-sm p-5 rounded-2xl ${
             isCenterLeft && "z-10"
           }`}
         />
@@ -138,7 +135,7 @@ const FeedbacksCarousel = ({ feedbacks }: { feedbacks: any[] }) => {
             scale: isCenter ? 1 : 0.85,
             left: positions.center.left,
           }}
-          className={`absolute bg-creamy-black w-10/12 sm:w-full sm:w-auto sm:max-w-xs p-5 rounded-2xl ${
+          className={`absolute bg-creamy-black w-10/12 sm:w-full sm:w-auto sm:max-w-xs lg:max-w-sm p-5 rounded-2xl ${
             isCenter && "z-10"
           }`}
         />
@@ -150,7 +147,7 @@ const FeedbacksCarousel = ({ feedbacks }: { feedbacks: any[] }) => {
             scale: isCenterRight ? 1 : 0.85,
             left: positions.right.left,
           }}
-          className={`absolute bg-creamy-black w-10/12 sm:w-full sm:w-auto sm:max-w-xs p-5 rounded-2xl ${
+          className={`absolute bg-creamy-black w-10/12 sm:w-full sm:w-auto sm:max-w-xs lg:max-w-sm p-5 rounded-2xl ${
             isCenterRight && "z-10"
           } `}
         />

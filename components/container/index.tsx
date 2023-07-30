@@ -13,7 +13,7 @@ const Container = ({
 }) => {
   return (
     <PageTransition pageKey={pageKey}>
-      <div className={`container mx-auto px-4 max-w-4xl ${className}`}>
+      <div className={`container mx-auto px-4 max-w-6xl ${className}`}>
         {children}
       </div>
     </PageTransition>

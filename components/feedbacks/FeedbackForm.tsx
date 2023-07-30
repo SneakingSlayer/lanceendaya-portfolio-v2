@@ -62,21 +62,30 @@ const FeedbackForm = (props: Modal) => {
     <ModalContainer isOpen={props.isOpen} modalRef={props.modalRef}>
       <form action="" onSubmit={handleSubmit(onSubmit)}>
         <div className="mb-4">
-          <Typography as="h5" variant="h5" className="text-creamy-white">
+          <Typography as="h4" variant="h4" className="text-creamy-white">
             Feeback
           </Typography>
-          <Typography className="text-creamy-white/50" variant="extra-small">
+          <Typography
+            className="dark:text-creamy-white/50 text-creamy-white/50"
+            variant="small"
+          >
             Say something about this portfolio
           </Typography>
         </div>
         {apiError && (
-          <Typography className="text-creamy-red mb-4" variant="extra-small">
+          <Typography
+            className="text-creamy-red dark:text-creamy-red  mb-4"
+            variant="extra-small"
+          >
             {apiError}
           </Typography>
         )}
         <div className="flex flex-col gap-3 mb-4">
           {errors?.name && (
-            <Typography className="text-creamy-red" variant="extra-small">
+            <Typography
+              className="text-creamy-red dark:text-creamy-red "
+              variant="extra-small"
+            >
               {errors?.name?.message}
             </Typography>
           )}
@@ -88,11 +97,15 @@ const FeedbackForm = (props: Modal) => {
             type="text"
             placeholder="Name"
             className={`bg-creamy-black rounded-lg text-sm px-4 py-2 text-creamy-white ${
-              errors?.name && "border border-creamy-red text-creamy-red"
+              errors?.name &&
+              "border border-creamy-red text-creamy-red dark:text-creamy-red "
             }`}
           />
           {errors?.message && (
-            <Typography className="text-creamy-red" variant="extra-small">
+            <Typography
+              className="text-creamy-red dark:text-creamy-red "
+              variant="extra-small"
+            >
               {errors?.message?.message}
             </Typography>
           )}
@@ -107,13 +120,14 @@ const FeedbackForm = (props: Modal) => {
             rows={4}
             placeholder="Message"
             className={`bg-creamy-black rounded-lg text-sm px-4 py-2 text-creamy-white ${
-              errors?.message && "border border-creamy-red text-creamy-red"
+              errors?.message &&
+              "border border-creamy-red text-creamy-red dark:text-creamy-red "
             }`}
           />
         </div>
 
         <Typography
-          variant="extra-small"
+          variant="small"
           className="text-creamy-white dark:text-creamy-white"
         >
           Rate 1-5 stars
@@ -142,23 +156,25 @@ const FeedbackForm = (props: Modal) => {
           ))}
         </ul>
         {errors?.stars && (
-          <Typography className="text-creamy-red" variant="extra-small">
+          <Typography
+            className="text-creamy-red dark:text-creamy-red "
+            variant="small"
+          >
             {errors?.stars?.message}
           </Typography>
         )}
         <div className="flex justify-end mt-5">
           <button
             disabled={isSubmitting}
-            type="submit"
-            className={`flex items-center gap-1 border border-creamy-white rounded-lg text-creamy-white py-1 px-3 text-xs ${
-              isSubmitting ? "opacity-50" : "opacity-1"
+            className={`flex justify-center items-center gap-2 border border-creamy-white dark:border-creamy-white rounded-lg text-creamy-white dark:text-creamy-white py-1.5 px-4 sm:py-1.5 sm:px-5 text-xs sm:text-sm  ${
+              isSubmitting ? "opacity-50" : "opacity-100"
             }`}
           >
             {isSubmitting ? (
               <Spinner />
             ) : (
               <>
-                <span>Send</span> <CgArrowLongRight fontSize={14} />
+                <span>Send</span> <CgArrowLongRight fontSize={18} />
               </>
             )}
           </button>

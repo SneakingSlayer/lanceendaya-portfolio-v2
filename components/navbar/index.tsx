@@ -52,11 +52,11 @@ const Navbar = ({ mode }: { mode: Modes }) => {
           : ""
       } z-20`}
     >
-      <div className="container mx-auto max-w-4xl px-4 py-2">
+      <div className="container mx-auto max-w-6xl px-4 py-2">
         <div className="flex items-center gap-10 justify-between w-full">
           <div className="flex items-center gap-16">
             <Link href={"/"}>
-              <Logo className="dark:fill-creamy-white fill-creamy-gray h-10 w-10 lg:h-11 lg:w-11" />
+              <Logo className="dark:fill-creamy-white fill-creamy-gray h-10 w-10 lg:h-14 lg:w-14" />
             </Link>
           </div>
           <div className="hidden md:flex w-full justify-between">
@@ -66,11 +66,11 @@ const Navbar = ({ mode }: { mode: Modes }) => {
                   <Link href={route.path}>
                     <Typography
                       as={"small"}
-                      variant="extra-small"
+                      variant="small"
                       className={`dark:hover:text-creamy-white ${
                         path === route.path
-                          ? "dark:text-creamy-white"
-                          : "dark:text-creamy-white/50"
+                          ? "dark:text-creamy-white font-medium"
+                          : "dark:text-creamy-white/50 opacity-50 "
                       }`}
                     >
                       {route.label}

@@ -45,7 +45,7 @@ const AboutPage = () => {
     <Container>
       <div className="w-full pt-10 md:pt-16 pb-10 ">
         <div className="mb-8 md:mb-10 lg:mb-16">
-          <PageTitle className="gap-1 sm:gap-5 mb-8">
+          <PageTitle className="gap-1 lg:gap-5 mb-8">
             <Typography as="h2" variant="h2">
               About me
             </Typography>
@@ -74,13 +74,13 @@ const AboutPage = () => {
             </div>
             <SocialLinks colorClass="dark:text-creamy-white dark:border-creamy-white dark:opacity-100 dark:hover:opacity-50 border-creamy-gray opacity-100 hover:opacity-50" />
           </div>
-          <Typography variant="small" className="mb-2">
+          <Typography className="mb-2 md:mb-3">
             My name is Lance and I am a Software Engineer from Davao city
             Philippines. I enjoy designing and developing Web Applications that
             are creative, eye-catching, and usable with the aim to ehance and
             ease your browsing experience.
           </Typography>
-          <Typography className="mb-4" variant="small">
+          <Typography className="mb-4">
             Here are a few technologies I’ve been working with recently:
           </Typography>
           <ul className="grid grid-cols-2 grid-cols-2 sm:grid-cols-3 gap-2 lg:gap-5">
@@ -90,17 +90,17 @@ const AboutPage = () => {
                 className="flex gap-3 items-center text-creamy-white/50 hover:text-creamy-white hover:cursor-pointer"
               >
                 <Typography variant="h5">{tech.icon}</Typography>
-                <Typography variant="small">{tech.name}</Typography>
+                <Typography>{tech.name}</Typography>
               </li>
             ))}
           </ul>
         </div>
         <div>
-          <PageTitle className="gap-1 sm:gap-3 md:gap-3 mb-8">
-            <Typography as="h5" variant="h5">
+          <PageTitle className="gap-1  lg:gap-3 mb-8">
+            <Typography as="h4" variant="h4">
               Experience
             </Typography>
-            <Typography variant="small" className="dark:text-creamy-white/50">
+            <Typography className="dark:text-creamy-white/50">
               {"Where I've worked"}
             </Typography>
           </PageTitle>
@@ -174,10 +174,7 @@ const TimelineItem = (props: TimelineItemProps) => {
         <Typography variant="h4" as="h4">
           {company}
         </Typography>
-        <Typography
-          variant="small"
-          colorClass="dark:text-creamy-white/50 text-creamy-gray"
-        >
+        <Typography colorClass="dark:text-creamy-white/50 text-creamy-gray">
           {title} | {startDate} - {endDate}
         </Typography>
       </div>
@@ -187,11 +184,11 @@ const TimelineItem = (props: TimelineItemProps) => {
             key={i}
             className="border border-creamy-gray/40 bg-creamy-gray/10 dark:border-creamy-white/40 dark:bg-creamy-white/10 px-3 py-1 rounded-full"
           >
-            <Typography variant="extra-small">{stack}</Typography>
+            <Typography variant="small">{stack}</Typography>
           </li>
         ))}
       </ul>
-      <Typography variant="small">{description}</Typography>
+      <Typography>{description}</Typography>
     </li>
   );
 };

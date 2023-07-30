@@ -81,7 +81,7 @@ const ProjectCard = (props: ProjectCardProps) => {
     year = "",
     isCollection = false,
     items = [],
-    heightClasses = "h-[12rem]",
+    heightClasses = "h-[14rem]",
     url = "",
     links,
   } = props;
@@ -165,23 +165,17 @@ const ProjectCard = (props: ProjectCardProps) => {
         <div className="flex flex-col justify-between w-full h-full">
           <div>
             <Typography
-              variant="h6"
-              as="h6"
+              variant="h5"
+              as="h5"
               className="font-bold dark:text-creamy-white text-creamy-white"
             >
               {name}
             </Typography>
-            <Typography
-              variant="small"
-              className="dark:text-creamy-white text-creamy-white"
-            >
+            <Typography className="dark:text-creamy-white text-creamy-white">
               {year}
             </Typography>
           </div>
-          <Typography
-            variant="extra-small"
-            className="truncate dark:text-creamy-white text-creamy-white"
-          >
+          <Typography className="truncate dark:text-creamy-white text-creamy-white">
             {description}
           </Typography>
         </div>
@@ -197,16 +191,16 @@ const ProjectCard = (props: ProjectCardProps) => {
           <div className="flex justify-between gap-1">
             <div className="flex gap-1">
               {links?.githubUrl && (
-                <div className="hover:cursor-pointer text-creamy-white opacity-100 hover:opacity-50 border rounded-full h-6 w-6 flex justify-center items-center">
+                <div className="hover:cursor-pointer text-creamy-white opacity-100 hover:opacity-50 border rounded-full h-7 w-7 flex justify-center items-center">
                   <Link href={links.githubUrl} target="_blank">
-                    <FaGithub fontSize={14} />
+                    <FaGithub fontSize={16} />
                   </Link>
                 </div>
               )}
               {links?.websiteUrl && (
-                <div className="hover:cursor-pointer text-creamy-white opacity-100 hover:opacity-50 border rounded-full h-6 w-6 flex justify-center items-center">
+                <div className="hover:cursor-pointer text-creamy-white opacity-100 hover:opacity-50 border rounded-full h-7 w-7 flex justify-center items-center">
                   <Link href={links.websiteUrl} target="_blank">
-                    <HiOutlineExternalLink fontSize={14} />
+                    <HiOutlineExternalLink fontSize={16} />
                   </Link>
                 </div>
               )}

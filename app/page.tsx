@@ -34,9 +34,14 @@ export default async function Home() {
                 year={project.year}
                 url={project.url}
                 links={project.links}
+                heightClasses="h-[14rem] md:h-[12.5rem] lg:h-[15rem]"
               />
             ))}
-            <ProjectCard isCollection={true} items={projects} />
+            <ProjectCard
+              isCollection={true}
+              items={projects}
+              heightClasses="h-[14rem] md:h-[12.5rem] lg:h-[15rem]"
+            />
           </div>
         </div>
       </div>

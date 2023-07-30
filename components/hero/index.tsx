@@ -10,12 +10,16 @@ const HeroSection = async () => {
       <PageTitle>
         <div>
           <Typography className="font-bold">Hello I am Lance,</Typography>
-          <Typography as={"h2"} variant="h2" className="font-bold mb-2 ">
+          <Typography as={"h1"} variant="h1" className="font-bold mb-2 ">
             I am a Software Engineer based in Davao
           </Typography>
         </div>
         <div>
-          <Typography className="dark:text-creamy-white/50 text-creamy-gray/50">
+          <Typography
+            as={"h5"}
+            variant="h5"
+            className="font-normal dark:text-creamy-white/50 text-creamy-gray/50"
+          >
             An engineer primarily focused in enhancing your web experience.
           </Typography>
         </div>

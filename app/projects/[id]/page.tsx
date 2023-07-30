@@ -30,16 +30,16 @@ const ProjectPage = ({ params }: { params: { id: string } }) => {
           <div className="flex flex-col sm:flex-row sm:items-center mt-3 mb-4 gap-4 sm:gap-0">
             <div className="flex  gap-1 sm:gap-2">
               {getProject?.links?.githubUrl && (
-                <div className="hover:cursor-pointer opacity-50 hover:opacity-100 dark:text-creamy-white text-creamy-gray border dark:border-creamy-white border-creamy-gray rounded-full h-6 w-6 flex justify-center items-center">
+                <div className="hover:cursor-pointer opacity-50 hover:opacity-100 dark:text-creamy-white text-creamy-gray border dark:border-creamy-white border-creamy-gray rounded-full h-7 w-7 flex justify-center items-center">
                   <Link href={getProject.links.githubUrl} target="_blank">
-                    <FaGithub fontSize={14} />
+                    <FaGithub fontSize={16} />
                   </Link>
                 </div>
               )}
               {getProject?.links?.websiteUrl && (
-                <div className="hover:cursor-pointer opacity-50 hover:opacity-100 dark:text-creamy-white text-creamy-gray border dark:border-creamy-white border-creamy-gray rounded-full h-6 w-6 flex justify-center items-center">
+                <div className="hover:cursor-pointer opacity-50 hover:opacity-100 dark:text-creamy-white text-creamy-gray border dark:border-creamy-white border-creamy-gray rounded-full h-7 w-7 flex justify-center items-center">
                   <Link href={getProject.links.websiteUrl} target="_blank">
-                    <HiOutlineExternalLink fontSize={14} />
+                    <HiOutlineExternalLink fontSize={16} />
                   </Link>
                 </div>
               )}
@@ -51,15 +51,15 @@ const ProjectPage = ({ params }: { params: { id: string } }) => {
                   key={tag}
                   className="border border-creamy-gray/40 bg-creamy-gray/10 dark:border-creamy-white/40 dark:bg-creamy-white/10 px-3 py-1 rounded-full"
                 >
-                  <Typography variant="extra-small">{tag}</Typography>
+                  <Typography variant="small">{tag}</Typography>
                 </li>
               ))}
             </ul>
           </div>
-          <Typography variant="small">{getProject.description}</Typography>
+          <Typography>{getProject.description}</Typography>
         </div>
         <div className="w-full mx-auto grid-cols-1 sm:grid-cols-2  grid gap-5">
-          <div className="rounded-2xl overflow-hidden relative min-h-[230px] sm:min-h-[250px] md:min-h-[300px]">
+          <div className="rounded-2xl overflow-hidden relative min-h-[14rem] sm:min-h-[280px] lg:min-h-[350px]">
             <Image
               src={getProject.images.primary}
               layout="fill"
@@ -67,7 +67,7 @@ const ProjectPage = ({ params }: { params: { id: string } }) => {
               alt={""}
             />
           </div>
-          <div className="rounded-2xl overflow-hidden relative min-h-[200px] sm:min-h-[250px] md:min-h-[300px]">
+          <div className="rounded-2xl overflow-hidden relative min-h-[14rem] sm:min-h-[280px] lg:min-h-[350px]">
             <Image
               src={getProject.images.secondary}
               layout="fill"
@@ -75,7 +75,7 @@ const ProjectPage = ({ params }: { params: { id: string } }) => {
               alt={""}
             />
           </div>
-          <div className="rounded-2xl overflow-hidden relative min-h-[200px] sm:min-h-[250px] md:min-h-[300px]">
+          <div className="rounded-2xl overflow-hidden relative min-h-[14rem] sm:min-h-[280px] lg:min-h-[350px]">
             <Image
               src={getProject.images.tertiary}
               layout="fill"
