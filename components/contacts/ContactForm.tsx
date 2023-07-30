@@ -46,7 +46,10 @@ const ContactForm = () => {
     <form action="" onSubmit={handleSubmit(onSubmit)}>
       <div className="flex-col flex gap-3">
         {errors?.name && (
-          <Typography className="text-creamy-red" variant="extra-small">
+          <Typography
+            className="text-creamy-red dark:text-creamy-red "
+            variant="extra-small"
+          >
             {errors?.name?.message}
           </Typography>
         )}
@@ -57,12 +60,16 @@ const ContactForm = () => {
           })}
           placeholder="Your name"
           type="text"
-          className={`dark:bg-creamy-black bg-transparent border border-creamy-gray rounded-lg text-sm px-4 py-2 text-creamy-gray dark:text-creamy-white ${
-            errors?.name && "border border-creamy-red text-creamy-red"
+          className={`dark:bg-creamy-black bg-transparent border border-creamy-gray rounded-lg text-sm sm:text-base px-4 py-2 sm:px-4 sm:py-3 text-creamy-gray dark:text-creamy-white ${
+            errors?.name &&
+            "border border-creamy-red text-creamy-red dark:text-creamy-red "
           }`}
         />
         {errors?.email && (
-          <Typography className="text-creamy-red" variant="extra-small">
+          <Typography
+            className="text-creamy-red dark:text-creamy-red "
+            variant="extra-small"
+          >
             {errors?.email?.message}
           </Typography>
         )}
@@ -72,12 +79,16 @@ const ContactForm = () => {
           })}
           placeholder="Your email"
           type="email"
-          className={`dark:bg-creamy-black bg-transparent border border-creamy-gray rounded-lg text-sm px-4 py-2 text-creamy-gray dark:text-creamy-white ${
-            errors?.email && "border border-creamy-red text-creamy-red"
+          className={`dark:bg-creamy-black bg-transparent border border-creamy-gray rounded-lg text-sm sm:text-base px-4 py-2 sm:px-4 sm:py-3 text-creamy-gray dark:text-creamy-white ${
+            errors?.email &&
+            "border border-creamy-red text-creamy-red dark:text-creamy-red "
           }`}
         />
         {errors?.message && (
-          <Typography className="text-creamy-red" variant="extra-small">
+          <Typography
+            className="text-creamy-red dark:text-creamy-red "
+            variant="extra-small"
+          >
             {errors?.message?.message}
           </Typography>
         )}
@@ -87,8 +98,9 @@ const ContactForm = () => {
             minLength: { value: 50, message: "Must be alteast 50 characters" },
           })}
           placeholder="Say something..."
-          className={`dark:bg-creamy-black bg-transparent border border-creamy-gray rounded-lg text-sm px-4 py-2 text-creamy-gray dark:text-creamy-white ${
-            errors?.message && "border border-creamy-red text-creamy-red"
+          className={`dark:bg-creamy-black bg-transparent border border-creamy-gray rounded-lg text-sm sm:text-base px-4 py-2 sm:px-4 sm:py-3 text-creamy-gray dark:text-creamy-white ${
+            errors?.message &&
+            "border border-creamy-red text-creamy-red dark:text-creamy-red "
           }`}
           rows={6}
         />
@@ -109,7 +121,7 @@ const ContactForm = () => {
 
         <button
           disabled={isSubmitting || isSubmitted}
-          className={`flex justify-center items-center gap-2 border border-creamy-gray dark:border-creamy-white rounded-lg text-creamy-gray dark:text-creamy-white py-1 px-5 text-sm ${
+          className={`flex justify-center items-center gap-2 border border-creamy-gray dark:border-creamy-white rounded-lg text-creamy-gray dark:text-creamy-white py-2 px-5 sm:py-2 sm:px-6 text-sm sm:text-base ${
             isSubmitting || isSubmitted ? "opacity-50" : "opacity-100"
           }`}
         >
@@ -117,7 +129,7 @@ const ContactForm = () => {
             <Spinner />
           ) : (
             <>
-              <span>Send</span> <CgArrowLongRight fontSize={16} />
+              <span>Send</span> <CgArrowLongRight fontSize={18} />
             </>
           )}
         </button>

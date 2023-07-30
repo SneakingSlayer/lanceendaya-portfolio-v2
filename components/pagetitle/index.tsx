@@ -8,7 +8,7 @@ const PageTitle = ({
   className?: string;
 }) => {
   return (
-    <div className={`flex flex-col sm:flex-row sm:items-center ${className}`}>
+    <div className={`flex flex-col lg:flex-row lg:items-center ${className}`}>
       {children}
     </div>
   );

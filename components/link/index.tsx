@@ -22,7 +22,7 @@ const CustomLink = (props: Props) => {
     label,
     rightIcon,
     leftIcon,
-    variant = "small",
+    variant = "body",
     colorClass = "text-creamy-gray dark:text-creamy-white",
     className = "",
     target,
@@ -34,7 +34,7 @@ const CustomLink = (props: Props) => {
       className={`font-semibold inline-flex items-center gap-2 ${colorClass} hover:opacity-50 ${className}`}
     >
       {leftIcon && leftIcon}
-      <Typography as={"small"} variant={variant} className={`${colorClass}`}>
+      <Typography variant={variant} className={`${colorClass}`}>
         {label}
       </Typography>
       {rightIcon && rightIcon}

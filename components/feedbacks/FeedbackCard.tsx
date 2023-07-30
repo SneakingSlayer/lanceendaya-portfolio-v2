@@ -35,18 +35,17 @@ const FeedbackCard = ({
     <motion.div
       animate={animate}
       ref={centerRef}
-      className={`border border-creamy-white/5 bg-creamy-gray dark:bg-creamy-black  p-5 rounded-2xl min-h-[130px] ${className} overflow-hidden`}
+      className={`border border-creamy-white/5 bg-creamy-gray dark:bg-creamy-black  p-5 rounded-2xl min-h-[120px] lg:min-h-[150px] ${className} overflow-hidden`}
     >
       <Typography
         className={`break-normal dark:text-creamy-white-muted text-creamy-white-muted mb-2 ${truncateText}`}
-        variant="small"
       >
         {feedback?.message
           ? feedback.message
           : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec etmetus quis nunc fringilla lacinia."}
       </Typography>
       <div className="flex justify-between items-center">
-        <Typography variant="small" className="font-semibold text-creamy-white">
+        <Typography className="font-semibold text-creamy-white">
           - {feedback?.name ? feedback.name : "Lance Endaya"}
         </Typography>
         <div className="flex gap-1">

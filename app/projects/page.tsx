@@ -21,7 +21,7 @@ const ProjectsPage = () => {
   return (
     <Container pageKey="projects">
       <div className="w-full pt-10 md:pt-16 pb-10 ">
-        <PageTitle className="gap-1 sm:gap-5 mb-8">
+        <PageTitle className="gap-1 lg:gap-5 mb-8">
           <Typography as="h2" variant="h2">
             Personal projects
           </Typography>
@@ -40,7 +40,7 @@ const ProjectsPage = () => {
                 name={project.name}
                 description={project.description}
                 year={project.year}
-                heightClasses="h-[12rem] sm:h-[14rem] md:h-[15rem] lg:h-[16rem]"
+                heightClasses="h-[14rem] md:h-[18rem] lg:h-[22rem]"
               />
             ))}
           </div>
