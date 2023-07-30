@@ -10,9 +10,19 @@ import { CustomLink, SocialLinks, Typography } from "@/components";
 
 const ProfileCard = () => {
   return (
-    <div className="relative w-full overflow-hidden md:w-[40%] h-auto dark:bg-creamy-black bg-creamy-gray flex flex-col md:items-center px-5 py-6 md:p-5 rounded-2xl justify-between">
-      <Logo className="absolute md:static  block md:block fill-creamy-white bottom-[-70%] right-[-20%] h-80 w-80 opacity-5 md:opacity-100 md:h-10 md:w-10 mb-3 md:mb-0" />
-      <div className="pb-0 md:pb-6 md:justify-center text-center flex flex-col md:items-center gap-2 ">
+    <div className="border border-creamy-white/5 overflow-hidden relative w-full overflow-hidden md:w-[40%] h-auto dark:bg-creamy-black bg-creamy-gray flex flex-col md:items-center px-6 py-7 md:p-5 rounded-2xl justify-between">
+      <video
+        loop
+        autoPlay
+        muted
+        controls={false}
+        className="profile-card-bg h-auto md:h-full w-full md:w-auto opacity-40"
+      >
+        <source src="/bg.mp4" type="video/mp4" />
+      </video>
+      <Logo className="z-[2] md:static hidden md:block fill-creamy-white  h-8 w-8  md:opacity-100 md:h-10 md:w-10 mb-3 md:mb-0" />
+      {/* <Logo className="z-[2] absolute md:static  block md:block fill-creamy-white bottom-[-70%] right-[-20%] h-80 w-80 opacity-5 md:opacity-100 md:h-10 md:w-10 mb-3 md:mb-0" /> */}
+      <div className="z-[2] relative pb-0 md:pb-6 md:justify-center text-center flex flex-col md:items-center gap-2 ">
         <div className="flex items-center md:flex-col gap-3 text-left md:text-center">
           <Image
             className="rounded-full"
@@ -39,7 +49,6 @@ const ProfileCard = () => {
         </div>
         <div className="flex pt-3 items-center justify-between w-full gap-4">
           <SocialLinks colorClass="dark:border-creamy-white dark:text-creamy-white border-creamy-white text-creamy-white hover:opacity-100 opacity-50" />
-
           <CustomLink
             className="z-10 flex items-center gap-2 text-xs font-bold block md:hidden"
             colorClass="text-creamy-white dark:text-creamy-white"
@@ -50,7 +59,7 @@ const ProfileCard = () => {
         </div>
       </div>
       <CustomLink
-        className="hidden md:inline-flex"
+        className="hidden md:inline-flex z-[2]"
         colorClass="text-creamy-white dark:text-creamy-white"
         href="/about"
         label="About Me"

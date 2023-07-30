@@ -49,7 +49,7 @@ const ContactPage = () => {
             </li>
           </ul>
           <div className="py-3">
-            <SocialLinks />
+            <SocialLinks colorClass="dark:text-creamy-white dark:border-creamy-white dark:opacity-100 dark:hover:opacity-50 border-creamy-gray opacity-100 hover:opacity-50" />
           </div>
         </div>
         <div>
