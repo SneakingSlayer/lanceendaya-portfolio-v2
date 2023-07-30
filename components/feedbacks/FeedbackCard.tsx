@@ -35,10 +35,10 @@ const FeedbackCard = ({
     <motion.div
       animate={animate}
       ref={centerRef}
-      className={`bg-creamy-gray dark:bg-creamy-black  p-5 rounded-2xl min-h-[130px] ${className} overflow-hidden`}
+      className={`border border-creamy-white/5 bg-creamy-gray dark:bg-creamy-black  p-5 rounded-2xl min-h-[130px] ${className} overflow-hidden`}
     >
       <Typography
-        className={`break-normal text-creamy-white-muted mb-2 ${truncateText}`}
+        className={`break-normal dark:text-creamy-white-muted text-creamy-white-muted mb-2 ${truncateText}`}
         variant="small"
       >
         {feedback?.message
