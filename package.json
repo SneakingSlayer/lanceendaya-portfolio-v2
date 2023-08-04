@@ -28,6 +28,7 @@
     "nextjs-toploader": "^1.4.2",
     "postcss": "8.4.25",
     "react": "18.2.0",
+    "react-animated-cursor": "^2.7.0",
     "react-device-detect": "^2.2.3",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.45.2",

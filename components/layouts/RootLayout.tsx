@@ -6,6 +6,11 @@ import { Work_Sans } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
 import { Footer, Logo, Navbar, Typography } from "@/components";
 import { AnimatePresence, motion } from "framer-motion";
+import dynamic from "next/dynamic";
+
+const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
+  ssr: false,
+});
 
 const work = Work_Sans({ subsets: ["latin"] });
 
@@ -42,6 +47,18 @@ const RootLayout = ({
             : "bg-creamy-white/50 text-creamy-gray"
         }`}
       >
+        <AnimatedCursor
+          innerSize={8}
+          outerSize={35}
+          innerScale={1}
+          outerScale={2}
+          innerStyle={{ background: "white", mixBlendMode: "exclusion" }}
+          outerStyle={{
+            border: "1px solid white",
+            background: "transparent",
+            mixBlendMode: "exclusion",
+          }}
+        />
         <NextTopLoader
           color={mode === "dark" ? "#efebe680" : "#1d1f23"}
           initialPosition={0.08}
