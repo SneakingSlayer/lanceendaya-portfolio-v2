@@ -63,4 +63,5 @@ body {
   position: absolute;
   object-fit: cover;
   z-index: 1;
+  left: 0;
 }
