@@ -1,8 +1,5 @@
-import Link from "next/link";
 import React from "react";
-import { BsInstagram, BsTwitter, BsGithub, BsLinkedin } from "react-icons/bs";
 import { CgArrowLongRight } from "react-icons/cg";
-import { FaFacebookF } from "react-icons/fa";
 import Logo from "../logo";
 import Image from "next/image";
 
@@ -11,7 +8,7 @@ import { CustomLink, SocialLinks, Typography } from "@/components";
 const ProfileCard = () => {
   return (
     <div className="border border-creamy-white/5 overflow-hidden relative w-full overflow-hidden md:w-[40%] h-auto dark:bg-creamy-black bg-creamy-gray flex flex-col md:items-center px-6 py-7 md:p-5 rounded-2xl justify-between">
-      <video
+      {/* <video
         loop
         autoPlay
         muted
@@ -19,7 +16,13 @@ const ProfileCard = () => {
         className="profile-card-bg h-auto md:h-full w-full md:w-auto opacity-40"
       >
         <source src="/bg.mp4" type="video/mp4" />
-      </video>
+      </video> */}
+      <Image
+        src="/profile-card-bg.webp"
+        alt="profile-card"
+        className="profile-card-bg h-auto md:h-full w-full md:w-auto opacity-20"
+        layout="fill"
+      />
       <Logo className="z-[2] md:static hidden md:block fill-creamy-white  h-8 w-8 md:h-12 md:w-12 mb-3 md:mb-0" />
       {/* <Logo className="z-[2] absolute md:static  block md:block fill-creamy-white bottom-[-70%] right-[-20%] h-80 w-80 opacity-5 md:opacity-100 md:h-10 md:w-10 mb-3 md:mb-0" /> */}
       <div className="z-[2] relative pb-0 md:pb-6 md:justify-center text-center flex flex-col md:items-center  gap-2 ">
