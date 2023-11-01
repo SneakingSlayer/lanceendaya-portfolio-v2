@@ -191,11 +191,20 @@ interface TimelineItemProps {
 
 const experiences = [
   {
+    company: "PriceMe",
+    title: "Full-stack Developer",
+    stack: ["React JS", "Node JS", "Express JS", "PostgreSQL", "Heroku"],
+    startDate: "August 2023",
+    endDate: "Present",
+    description: `Responsible for building and maintaining a full-stack application, handling both the frontend and backend components. Develop the user interface and functionality using React.js, while Express/Node.js powers the server-side logic and API.`,
+    link: "",
+  },
+  {
     company: "Reward Holdings Limited",
     title: "Frontend Developer",
     stack: ["React JS", "React Native", "Node JS", "MySQL", "Wordpress"],
     startDate: "August 2022",
-    endDate: "Present",
+    endDate: "August 2023",
     description: `Builds and maintains React, React Native, Wordpress custom themes, &
     Zendesk custom themes. Server-side scripting using Node JS for
     third-party automations. Figure out legacy codebase and re-engineer to
